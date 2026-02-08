@@ -6,17 +6,12 @@ clc;
 % clear all;
 SubjectTimestamps;
 
-%%
-
 folderPath='C:\Users\Smilja Stokanovic\Desktop\Ljubljana\Research paper\Raw data\MAGLA\Saccade Detection';
-%%
 
 fileList=dir(fullfile(folderPath, '*txt'));
 fs = 100; %Sampling frequency
 k=3;
 fileNames=cell(1,length(fileList));
-%'1503_01_gazedata_output.txt''1903_07_gazedata_output.txt'
-%'1503_01_gazedata_output.txt','1503_02_gazedata_output.txt',
 specificFiles = {'1703_01_gazedata_output.txt', '1703_02_gazedata_output.txt', ...
                      '1703_03_gazedata_output.txt','1703_05_gazedata_output.txt', '1703_06_gazedata_output.txt', ...
                      '1703_07_gazedata_output.txt', '1703_08_gazedata_output.txt', '1803_01_gazedata_output.txt', '1803_02_gazedata_output.txt', ...
@@ -483,6 +478,7 @@ saccadescsvFilePath = ['NumSaccadesBaseline', '.csv'];
 writetable(resultTable,saccadescsvFilePath,'Delimiter',',');
 
 close all
+
 
 
 
