@@ -18,8 +18,7 @@ The repository is divided into four main folders and the repository contains the
   [parameterSearch.m]() - <br>
   [saccade_detection_function.m]() - MATLAB code for saccade detection and extraction of statistical features.<br>
   [parameterSearch.m]() - <br>
-  [SubjectTimestamps.m]() - <br>
-  
+
 2) BCEA: <br>
    [BCEA.m]() -<br>
    [ellipseOverlap.m]() -<br>
@@ -38,11 +37,10 @@ The repository is divided into four main folders and the repository contains the
    [BlinksStatisticFeatures2.ipynb]() - <br>
 
 5) [LICENSE file](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/LICENSE) - containing GNU General Public License v3.0
-
+6) SubjectTimestamps.m - MATLAB script for the Baseline, Ride, and Fog Timestamps. This script should be used for saccade detection, BCEA, and blink detection.
  
 ### Data
 Data provided in this repository are shared under Attribution 4.0 International (CC BY 4.0).
-
 
 
 ## Contacts
@@ -55,5 +53,5 @@ This work has been financially supported also by the European Union’s Horizon 
 ## How to cite this repository?
 If you find provided code and signals useful for your own research and teaching class, please cite the following references:
 
-Tanasković, I., & Miljković, N. (2023). A new algorithm for fetal heart rate detection: Fractional order calculus approach. Medical Engineering & Physics, 104007. https://doi.org/10.1016/j.medengphy.2023.104007 <br>
-Tanasković, I., & Miljković, N. (2023). NadicaSm/Fetal-Heart-Rate-Detection: Software and Data for Fetal Heart Rate Detection (Version v1) [Software code and data] Zenodo. https://doi.org/10.5281/zenodo.7824902 <br>
+Stokanović S., Sodnik J., Miljković N. (2025). From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator. ArXiv, https://doi.org/10.48550/arXiv.2511.02689 <br>
+Stokanović S., Sodnik J., Miljković N. (2026). /smiljastokanovic/EyeTrackingParametersCalculation: Software and Data for  From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator (Version v1) [Software code and data] Zenodo. https://doi.org/ <br>
