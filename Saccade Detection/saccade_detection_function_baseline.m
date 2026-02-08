@@ -1,6 +1,6 @@
 function DATA = saccade_detection_function_baseline(raw_data,t, raw_PT, raw_noise, raw_std)
 % Algorithm for saccade detection and extraction of statistical features.
-% Saccade detection is performed based on the horizontal visual angle,
+% Saccade detection is performed based on the velocity calculated using horizontal and vertical angle,
 % inspired by the algorithm described in Nystrom and Holmqvist (2010).
 % Finally, relevant information and statistical features of saccades are extracted.
 
@@ -26,8 +26,6 @@ function DATA = saccade_detection_function_baseline(raw_data,t, raw_PT, raw_nois
 % defining constants related to the experiment setup
 
 Fs = 100;
-% paper_size_cm = [21, 29.7]; % A4 paper size in cm (width x height)
-% distance = 40;              % Distance from eyes to paper in cm
 
 % Normalized Tobii gaze coordinates (0 to 1)
 norm_x = raw_data(:, 1); % Horizontal gaze (0 to 1)
@@ -71,27 +69,6 @@ fs=100;
 minimumDistance=0.05;
 minN=2.5;
 maxN=6;
-% 
-% [optimalN_ivt] = parameterSearch(gaze_vel,fs, minN, maxN,time_iv);
-% 
-% [PT,noise_mean,noise_std] = IVT_algorithm(gaze_vel,optimalN_ivt);
-% PT = 200;
-% run_flag = true;
-% iter = 0;
-% PTs = [];
-% while run_flag
-%     PTs = [PTs PT];
-%     iter = iter+1;
-%     PT_old = PT;
-%     noise = gaze_vel(gaze_vel<PT_old); 
-%     noise_mean = mean(noise);
-%     noise_std = std(noise);
-%     PT = noise_mean + 6*noise_std;
-%     if abs(PT-PT_old) < 1
-%         run_flag = false;
-%         disp(["Algorithm converged: PT = " num2str(PT,4)])
-%     end      
-% end
     
 %% Saccade detection
 % detecting peaks
@@ -224,30 +201,13 @@ for ind = 1:min_length-1
     end
 end
 
-% min_length = min(length(onset_idxs), length(offset_idxs));
-% onset_idxs = onset_idxs(1:min_length);
-% offset_idxs = offset_idxs(1:min_length);
-% 
-% valid_pairs = find(onset_idxs < offset_idxs);
-% onset_idxs = onset_idxs(valid_pairs);
-% offset_idxs = offset_idxs(valid_pairs);
 durations = durations/Fs*1000;
-%gaze_times = gaze_times/Fs*1000;
 gaze_times = (onset_idxs(2:end) - offset_idxs(1:end-1)) / Fs * 1000;
-% 
-% sacc_traj = {};
-% sacc_traj_t = {};
-% 
-% for ind = 1:length(peak_idxs)
-%     sacc_traj{ind} = gaze_amp(onset_idxs(ind):offset_idxs(ind));
-%     sacc_traj_t{ind} = t(onset_idxs(ind):offset_idxs(ind));
-% end
+
       
 %% Calculating statistical parameters
-%sacc_amplitudes = abs(gaze_amp(onset_idxs1)' - gaze_amp(offset_idxs1)');
 min_length = min(length(onset_idxs1), length(offset_idxs1));
 sacc_amplitudes = nan(1, min_length); % Preallocate for speed
-
 
 for ind = 1:min_length
     if onset_idxs1(ind) < offset_idxs1(ind)
