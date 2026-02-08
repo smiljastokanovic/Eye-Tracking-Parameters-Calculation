@@ -6,16 +6,12 @@ close all;
 clear all;
 clc;
 SubjectTimestamps;
-%%
 
 folderPath='C:\Users\Smilja Stokanovic\Desktop\Ljubljana\Research paper\Raw data\MAGLA\Saccade Detection';
-%%
-
 fileList=dir(fullfile(folderPath, '*txt'));
 fs = 100; %Sampling frequency
 k=3;
 fileNames=cell(1,length(fileList));
-%'1503_01_gazedata_output.txt''1903_07_gazedata_output.txt'
 specificFiles = { '1703_01_gazedata_output.txt', '1703_02_gazedata_output.txt', ...
                      '1703_03_gazedata_output.txt','1703_05_gazedata_output.txt', '1703_06_gazedata_output.txt', ...
                      '1703_07_gazedata_output.txt', '1703_08_gazedata_output.txt', '1803_01_gazedata_output.txt', '1803_02_gazedata_output.txt', ...
@@ -25,8 +21,8 @@ specificFiles = { '1703_01_gazedata_output.txt', '1703_02_gazedata_output.txt', 
                      '2003_02_gazedata_output.txt','2003_03_gazedata_output.txt','2003_04_gazedata_output.txt','2003_06_gazedata_output.txt',...
                      '2003_07_gazedata_output.txt','2003_08_gazedata_output.txt'};
 %%
-fi_1=82/1920;
-fi_2=52/1080;
+fi_1=95/1920;
+fi_2=63/1080;
 
 for i = 1:length(fileList)
     filePath = fullfile(folderPath, fileList(i).name);  
@@ -184,14 +180,6 @@ for i=1:length(fileList)
 
         dens = mvksdensity(X, [Xg(:) Yg(:)], 'Bandwidth', bw);
         dens = reshape(dens, gridSize, gridSize);
-
-%         figure;
-%         contour(Xg, Yg, dens, 'LineWidth',1.2);
-%         hold on;
-%         scatter(X(:,1), X(:,2), 8, 'k', 'filled');
-%         axis equal
-%         xlabel('X'); ylabel('Y');
-%         title('KDE contours – PRL candidates');
 
         % --- Detect peaks on density surface
         peakMask = imregionalmax(dens);
@@ -467,17 +455,6 @@ for i = 1:length(fileList)
         major_axis = data.(fileNameWithoutExt).major_axis;
         minor_axis= data.(fileNameWithoutExt).minor_axis;
 
-%         plot([mu_x - major_axis(1), mu_x + major_axis(1)], [mu_y - major_axis(2), mu_y + major_axis(2)], 'b', 'LineWidth', 2);
-%         plot([mu_x - minor_axis(1), mu_x + minor_axis(1)], [mu_y - minor_axis(2), mu_y + minor_axis(2)], 'y', 'LineWidth', 2);
-% 
-%         quiver(mu_x, mu_y, data.(fileNameWithoutExt).sigma_H * data.(fileNameWithoutExt).eig_vec_sorted(1,1), ...
-%                          data.(fileNameWithoutExt).sigma_H * data.(fileNameWithoutExt).eig_vec_sorted(2,1), ...
-%                1, 'm', 'LineWidth', 2, 'MaxHeadSize', 0.5); 
-% 
-%         quiver(mu_x, mu_y, data.(fileNameWithoutExt).sigma_V * data.(fileNameWithoutExt).eig_vec_sorted(1,2), ...
-%                          data.(fileNameWithoutExt).sigma_V * data.(fileNameWithoutExt).eig_vec_sorted(2,2), ...
-%                1, 'm', 'LineWidth', 2, 'MaxHeadSize', 0.5); 
-
         xlabel({'X decentration'; '(min arc)'});
 %         ylabel('Y decentration (min arc)');
         set(gca, 'FontSize', 30);
@@ -529,140 +506,6 @@ for i = 1:length(fileList)
         num_contour_levels = 350; 
 
         contour(X_grid, Y_grid, Z_density_manual_log, num_contour_levels, 'k');
-
-%         x = data.(fileNameWithoutExt).x_baseline;
-%         y = data.(fileNameWithoutExt).y_baseline;
-%         x = x(:); y = y(:);
-%         n = numel(x);
-%         X = [x y];
-
-%         %% === 1) Silverman bandwidths & KDE ===================================
-%         sigma_x_hat = std(x);
-%         sigma_y_hat = std(y);
-% 
-%         h_x = 1.5 * sigma_x_hat * n^(-1/6);
-%         h_y = 1.5 * sigma_y_hat * n^(-1/6);
-% 
-%         min_x = min(x); max_x = max(x);
-%         min_y = min(y); max_y = max(y);
-%         margin_x = 0.05*(max_x-min_x);
-%         margin_y = 0.05*(max_y-min_y);
-% 
-%         plot_min_x = min_x - margin_x;
-%         plot_max_x = max_x + margin_x;
-%         plot_min_y = min_y - margin_y;
-%         plot_max_y = max_y + margin_y;
-% 
-%         num_grid_points = 50;
-%         [X_grid, Y_grid] = meshgrid(linspace(plot_min_x, plot_max_x, num_grid_points), ...
-%                                     linspace(plot_min_y, plot_max_y, num_grid_points));
-% 
-%         Z_density = zeros(size(X_grid));
-%         kernel_fun = @(u,v) (1/(2*pi)) * exp(-0.5*(u.^2 + v.^2));
-% 
-%         for j = 1:num_grid_points
-%             for k = 1:num_grid_points
-%                 u = (x - X_grid(j,k))/h_x;
-%                 v = (y - Y_grid(j,k))/h_y;
-%                 Z_density(j,k) = sum(kernel_fun(u,v)) / (n*h_x*h_y);
-%             end
-%         end
-%         Z_density = Z_density / sum(Z_density(:));     % optional normalisation
-% 
-%         figure;
-%         contour(X_grid, Y_grid, log10(Z_density+1), 20,'k');
-%         hold on; scatter(x,y,8,'filled','MarkerFaceColor',[0.3 0.3 0.3]);
-%         axis equal; title('KDE contours (Silverman h)');
-% 
-%         %% === 2) Peak detection on KDE surface ================================
-%         peakMask = imregionalmax(Z_density);
-%         [yidx, xidx] = find(peakMask);
-%         K = numel(xidx);                      % # of candidate PRLs
-%         peakPos = [X_grid(1,xidx)', Y_grid(yidx,1)'];
-% 
-%         %% === 3) Fit EM with that K ============================================
-%         reg     = 1e-6;
-%         maxIter = 200;
-%         numRestarts = 5;
-%         bestLL  = -inf;
-% 
-%         for r = 1:numRestarts
-%             mu = peakPos + 0.05*randn(size(peakPos));   % jitter start at peaks
-%             Sigma = repmat(cov(X)+reg*eye(2),1,1,K);
-%             pi_k = ones(1,K)/K;
-%             L_old = -inf;
-% 
-%             for it = 1:maxIter
-%                 % ---- E-step
-%                 resp = zeros(n,K);
-%                 for j = 1:K
-%                     resp(:,j) = pi_k(j) * mvnpdf(X, mu(j,:), Sigma(:,:,j));
-%                 end
-%                 denom = sum(resp,2)+eps;
-%                 resp = resp ./ denom;
-% 
-%                 % ---- M-step
-%                 Nk = sum(resp,1);
-%                 for j = 1:K
-%                     mu(j,:) = (resp(:,j)'*X)/Nk(j);
-%                     diff = X - mu(j,:);
-%                     Sigma(:,:,j) = (resp(:,j).*diff)'*diff/Nk(j) + reg*eye(2);
-%                 end
-%                 pi_k = Nk / n;
-%                 L = sum(log(denom));
-%                 if abs(L-L_old) < 1e-4, break; end
-%                 L_old = L;
-%             end
-% 
-%             if L > bestLL
-%                 bestLL = L;
-%                 bestModel.mu    = mu;
-%                 bestModel.Sigma = Sigma;
-%                 bestModel.pi    = pi_k;
-%     end
-% end
-% 
-%         %% === 4) BCEA for each PRL ============================================
-%         bcea_k = 3;                 % choose 1/3/4.605 for 68/95/99%
-%         BCEA = zeros(1,K);
-%         for j = 1:K
-%             S = bestModel.Sigma(:,:,j);
-%             sx  = sqrt(S(1,1));
-%             sy  = sqrt(S(2,2));
-%             rho = S(1,2)/(sx*sy + eps);
-%             BCEA(j) = 2*pi*bcea_k*sx*sy*sqrt(max(0,1-rho^2));
-%         end
-% 
-%         %% === 5) Save & visualise =============================================
-%         data.(fileNameWithoutExt).numPRLs  = K;
-%         data.(fileNameWithoutExt).PRL_mu   = bestModel.mu;
-%         data.(fileNameWithoutExt).PRL_BCEA = BCEA;
-% 
-%         colors = lines(K);
-%         for j = 1:K
-%             error_ellipse(bestModel.Sigma(:,:,j), bestModel.mu(j,:), ...
-%                 'style','color',colors(j,:));
-%         end
-
-         %contour(X_grid, Y_grid, log10(Z_density + eps), num_contour_levels, 'k');
-         K = data.(fileNameWithoutExt).numPRLs;
-         colors = lines(K);
-%          for j = 1:K
-%             error_ellipse(data.(fileNameWithoutExt).bestModel.Sigma(:,:,j), data.(fileNameWithoutExt).bestModel.mu(j,:), ...
-%                 'style','color',colors(j,:));
-%          end
-         %[counts, centers] = hist3([data.(fileNameWithoutExt).x_baseline, data.(fileNameWithoutExt).y_baseline], 'Nbins', [50, 50]);
-        %scale = 6;
-        %contour(centers{1}, centers{2}, log10(counts / scale + 1),7, 'k');
-        grid on;
-        xlabel({'X decentration'; '(min arc)'});
-%         ylabel('Y decentration (min arc)');
-        set(gca, 'FontSize', 30);
-%         xlim padded
-%         ylim padded
-        xlim([0, 2000]);  
-        ylim([0, 1100]);
-
 
     end
     jpg_filename = sprintf('%sBCEABaseline.jpg', (fileNameWithoutExt));
