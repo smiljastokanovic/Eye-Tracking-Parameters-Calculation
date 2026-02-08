@@ -31,9 +31,7 @@ Fs = 100;
 norm_x = raw_data(:, 1); % Horizontal gaze (0 to 1)
 norm_y = raw_data(:, 2); % Vertical gaze (0 to 1)
 
-% Convert normalized coordinates to real-world positions on paper (in cm)
-% raw_x = norm_x * paper_size_cm(1); % Horizontal position in cm
-% raw_y = norm_y * paper_size_cm(2); % Vertical position in cm
+
 % visualization of the subject screen view
 deg_x = raw_data(:, 1);
 deg_y = raw_data(:, 2);
