@@ -29,12 +29,12 @@ The repository is divided into four main folders and the repository contains the
    [BlinkDetection.m]() - <br>
 
 4) Statistical analysis: <br>
-   [SaccadeStatisticsFeatures1.ipynb]() - <br>
-   [SaccadeStatisticsFeatures2.ipynb]() - <br>
-   [BCEAStatisticsFeatures1.ipynb]() - <br>
-   [BCEAStatisticsFeatures2.ipynb]() - <br>
-   [BlinksStatisticFeatures1.ipynb]() - <br>
-   [BlinksStatisticFeatures2.ipynb]() - <br>
+   [SaccadeStatisticsFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BCEAStatisticsFeatures.ipynb) - Python code for calculation central tendency statistics, boxplots, and coorelation matrices for saccade detection parameters. <br>
+   [SaccadeStatisticsFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BCEAStatisticsFeatures2.ipynb) - <br>
+   [BCEAStatisticsFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BlinksStatisticsFeatures.ipynb) - <br>
+   [BCEAStatisticsFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BlinksStatisticsFeatures2.ipynb) - <br>
+   [BlinksStatisticFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures.ipynb) - <br>
+   [BlinksStatisticFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures2.ipynb) - <br>
 
 5) [LICENSE file](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/LICENSE) - containing GNU General Public License v3.0
 6) SubjectTimestamps.m - MATLAB script for the Baseline, Ride, and Fog Timestamps. This script should be used for saccade detection, BCEA, and blink detection.
