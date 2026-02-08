@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: smiljastokanovic/EyeTrackingParametersCalculation: Software and Data for From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator"
+authors:
+- family-names: "Stokanović"
+  given-names: "Smilja"
+- family-names:  "Sodnik"
+  given-names: "Jaka"
+- family-names: "Miljković"
+  given-names: "Nadica"
+version: "v1"
+doi: ""
+date-released: 2026-02-10
+url: ""
+
+preferred-citation:
+  type: software
+  title: smiljastokanovic/EyeTrackingParametersCalculation: Software and Data for From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator"
+  authors:
+  - family-names: "Stokanović"
+    given-names: "Smilja"
+  - family-names:  "Sodnik"
+    given-names: "Jaka"
+  - family-names: "Miljković"
+    given-names: "Nadica"
+  version: "v1"
+  doi: ""
+  year: 2026
+  publisher: "Zenodo"
