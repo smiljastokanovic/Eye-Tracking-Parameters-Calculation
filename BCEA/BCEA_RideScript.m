@@ -2,6 +2,13 @@
 %% Frodo project
 % Smilja Stokanovic
 % May, 2025
+
+% This project uses the SampEn implementation from MATLAB File Exchange:
+% Víctor Martínez-Cagigal (2018). Sample Entropy. Mathworks.
+% Author: Víctor Martínez-Cagigal, 2018
+% URL: https://www.mathworks.com/matlabcentral/fileexchange/69381-sample-entropy
+% Accessed: Feb 2026
+
 close all;
 clear all;
 clc;
@@ -683,4 +690,5 @@ end
 FeaturesTable = table(subjectIDs',MEAN_x_table',STD_x_table',MEAN_y_table',STD_y_table',RHO_table',BCEA_table',num_PRL_table',Guziks_table',MSE_table', SampEntX_table',AppEntX_table',SampEntY_table',AppEntY_table','VariableNames', {'SubjectID','MeanHoriz','StdHoriz','MeanVert','StdVert','RHO','BCEA','Estimated PRL','Guziks Index', 'MSE','Sample Entropy Horiz', 'App Entropy Horiz', 'Sample Entropy Vert','App Entropy Vert'});
 featurescsvFilePath = ['BCEA_RideValues', '.csv'];
 writetable(FeaturesTable,featurescsvFilePath,'Delimiter',',');
+
 
