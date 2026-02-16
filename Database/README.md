@@ -2,8 +2,6 @@
 
 Signals from the eye tracker used in this paper are freely available at the Zenodo repository DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18660836.svg)](https://doi.org/10.5281/zenodo.18660836)
 
-.
-
 ## Description
 The database consists of E eye tracking signals from the Tobii Pro Glasses 3 eye tracker. The study was conducted in a simulated driving environment using a motion-based driving simulator. The database contains signals from 26 healthy individuals. The task included Baseline, driving under normal conditions (Ride), and driving during fog (Fog). Sample rate is set at fs = 100 Hz and the resolution is 1920 x 1080 pixels.
 
