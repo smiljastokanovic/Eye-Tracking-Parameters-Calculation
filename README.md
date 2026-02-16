@@ -12,65 +12,62 @@ This repository contains the complete analysis pipeline for processing eye track
 
 ## Repository Structure
 ```
-├── data/
-│   ├── baseline/          # Example dataset (Baseline condition)
-│   ├── ride/              # Placeholder (same structure as baseline)
-│   └── fog/               # Placeholder (same structure as baseline)
-├── scripts/
-│   ├── preprocessing.py   # Data cleaning and I-VT saccade detection
-│   ├── saccade_analysis.py
-│   ├── bcea_calculation.py
-│   ├── entropy_measures.py
-│   ├── blink_parameters.py
-│   └── statistical_analysis.py
-├── results/
-└── README.md
-```
-
-## Usage
-
-**The same analysis scripts are used for all three experimental conditions (Baseline, Ride, Fog).** To analyze data from different conditions, simply point the scripts to the appropriate data directory:
-```python
-# Example: Process Baseline condition
-python scripts/preprocessing.py --condition baseline --input data/baseline/
-
-# Example: Process Ride condition  
-python scripts/preprocessing.py --condition ride --input data/ride/
-
-# Example: Process Fog condition
-python scripts/preprocessing.py --condition fog --input data/fog/
+├── BCEA/
+│   ├── BCEA_BaselineScript.m
+│   ├── BCEA_FogScript.m
+│   ├── BCEA_RideScript.m
+│   ├── mahalPts.m
+│   └── sampen.m
+├── Blink Detection/
+│   └── BlinkDetection.m
+├── DataBase/
+├── Saccade Detection/
+│   ├── BaselineScript.m
+│   ├── FogScript.py
+│   ├── IVT_algorithm.m
+│   ├── RideScript.m
+│   ├── central_der.m
+│   ├── parameterSearch.m
+│   └── saccade_detection_function.m
+├── Statistical Analysis/
+├── CITATION.cff/
+├── LICENSE/
+├── README.md/
+└── SubjectTimestamps.m
 ```
 
 Please, report any bugs to the Authors listed in the Contacts.
 The repository is divided into four main folders and the repository contains the following code:
 1) Database - contains a README.md file with a link to the Zenodo page containing the used eye tracking dataset
 2) Saccades detection: <br>
-  [central_der.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/central_der.m) - MATLAB code for calculating the first derivative of a signal using the central difference method.<br>
+  [BaselineScript.m] (https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/BaselineScript.m) - Script for saccade detection and parameter calculation for the Baseline segment. <br>
+  [FogScript.m] (https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/FogScript.m) - Script for saccade detection and parameter calculation for the Fog segment. <br>
   [IVT_algorithm.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/IVT_algorithm.m) - MATLAB function for the I-VT (Identification by Velocity Threshold) algorithm with adaptive threshold. <br>
-  [LoadTobiiData.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/LoadTobiiDataBaseline.m) - MATLAB script for velocity calculation and visualization of saccade parameters<br>
+  [RideScript.m] (https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/RideScript.m) - Script for saccade detection and parameter calculation for the Ride segment.
+  [central_der.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/central_der.m) - MATLAB code for calculating the first derivative of a signal using the central difference method.<br>
   [parameterSearch.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/parameterSearch.m) - MATLAB function for optimizing parameter for I-VT algorithm.<br>
-  [saccade_detection_function.m]() - MATLAB code for saccade detection and extraction of statistical features.<br>
+  [saccade_detection_function.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/saccade_detection_function.m) - MATLAB code for saccade detection and extraction of statistical features.<br>
 
-3) BCEA: <br>
+4) BCEA: <br>
    [BCEA.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/BCEA.m) - MATLAB script for calculation of Bivariate Contour Ellipse Area (BCEA) parameters and visualization. <br>
    [ellipseOverlap.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/ellipseOverlap.m) - MATLAB function for calculation area of ellipse1 overlapped by ellipse2. <br>
-   [mahalPts.m]() - <br>
-   [sampen.m]() - <br>
+   [mahalPts.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/mahalPts.m) -  mahalPts computes the squared Mahalanobis distance between points and a multivariate Gaussian distribution defined by mean (mu) and covariance (S). The Mahalanobis distance accounts for covariance structure and scaling of the data, unlike Euclidean distance<br>
+   [sampen.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/sampen.m) - <br>
    
-4) Blink detection: <br>
+5) Blink detection: <br>
    [BlinkDetection.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Blink%20detection/BlinkDetection.m) - MATLAB script for calculation of blink parameters and visualization. <br>
 
-5) Statistical analysis: <br>
-   [SaccadeStatisticsFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures.ipynb) - Python code for calculation of central tendency statistics, boxplots, and correlation matrices for saccade detection parameters. <br>
-   [SaccadeStatisticsFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures2.ipynb) - Python code for saccade parameters post-hoc statistical analysis. <br>
-   [BCEAStatisticsFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BCEAStatisticsFeatures.ipynb) - Python code for calculating central tendency statistics, box plots, and correlation matrices for BCEA parameters.<br>
+6) Statistical analysis: <br>
+   [BCEAStatisticsFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BCEAStatisticsFeatures.ipynb)) - Python code for calculating central tendency statistics, box plots, and correlation matrices for BCEA parameters.<br>
    [BCEAStatisticsFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BCEAStatisticsFeatures2.ipynb) - Python code for the BCEA parameters post-hoc statistical analysis. <br>
    [BlinksStatisticFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BlinksStatisticsFeatures.ipynb) - Python code for calculating central tendency statistics, box plots, and correlation matrices for blink parameters. <br>
    [BlinksStatisticFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/BlinksStatisticsFeatures2.ipynb) - Python code for blink parameters post-hoc statistical analysis. <br>
+   [SaccadeStatisticsFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures.ipynb) - Python code for calculation of central tendency statistics, boxplots, and correlation matrices for saccade detection parameters. <br>
+   [SaccadeStatisticsFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures2.ipynb) - Python code for saccade parameters post-hoc statistical analysis. <br>
 
-6) [LICENSE file](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/LICENSE) - containing GNU General Public License v3.0
+7) [LICENSE file](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/LICENSE) - containing GNU General Public License v3.0
 
-7) SubjectTimestamps.m - MATLAB script for the Baseline, Ride, and Fog Timestamps. This script should be used for saccade detection, BCEA, and blink detection.
+8) SubjectTimestamps.m - MATLAB script for the Baseline, Ride, and Fog Timestamps. This script should be used for saccade detection, BCEA, and blink detection.
  
 ### Data
 Data provided in this repository are shared under Attribution 4.0 International (CC BY 4.0).
