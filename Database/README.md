@@ -34,5 +34,5 @@ The data is stored in **txt files**. Each row corresponds to a timestamped measu
 
 If you find these signals useful for your own research, please cite the relevant papers and dataset as:
 
-Stokanović, S., Sodnik, J., and Miljković, N., "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator." ArXiv, 2025, https://doi.org/10.48550/arXiv.2511.02689.<br>
-Stokanović, S., Sodnik, J., and Miljković, N., 2026. EyeTrackingParametersCalculation: Software and Data for From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator [Data set]. Zenodo, https://doi.org/10.5281/zenodo.18660836.
+1. Stokanović, S., Sodnik, J., and Miljković, N., "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator." ArXiv, 2025, https://doi.org/10.48550/arXiv.2511.02689.<br>
+2. Stokanović, S., Sodnik, J., and Miljković, N., 2026. EyeTrackingParametersCalculation: Software and Data for From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator [Data set]. Zenodo, https://doi.org/10.5281/zenodo.18660836.
