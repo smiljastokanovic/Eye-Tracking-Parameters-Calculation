@@ -75,6 +75,15 @@ The repository is divided into four main folders and the repository contains the
 ### Data
 Data provided in this repository are shared under Attribution 4.0 International (CC BY 4.0).
 
+### Acknowledgements / Third-Party Code
+
+This repository uses the following third-party MATLAB function:
+
+Sample Entropy (SampEn)
+Author: Víctor Martínez-Cagigal
+Source: MATLAB Central File Exchange
+URL: [https://www.mathworks.com/matlabcentral/fileexchange/124326-sampen](https://www.mathworks.com/matlabcentral/fileexchange/69381-sample-entropy)
+Accessed: February 2026
 
 ## Contacts
 Smilja Stokanović (smiljastokanovic@gmail.com)
