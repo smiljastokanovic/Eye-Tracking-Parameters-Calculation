@@ -1,7 +1,7 @@
 #Open-access Eye tracking Database
 
-Signals from the eye tracker used in this paper are freely available at the Zenodo repository DOI: <img width="191" height="20" alt="image" src="https://github.com/user-attachments/assets/f73b458c-925b-4ad9-94c3-22c3a683277b" />
-<img width="191" height="20" alt="image" src="https://github.com/user-attachments/assets/f73b458c-925b-4ad9-94c3-22c3a683277b" />
+Signals from the eye tracker used in this paper are freely available at the Zenodo repository DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18660836.svg)](https://doi.org/10.5281/zenodo.18660836)
+
 .
 
 ## Description
