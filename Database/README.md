@@ -25,10 +25,10 @@ The data is stored in **txt files**. Each row corresponds to a timestamped measu
 | `gaze3d_x`, `gaze3d_y`, `gaze3d_z` | 3D gaze coordinates in space (scene coordinates) |
 | `eyeleft_origin_x`, `eyeleft_origin_y`, `eyeleft_origin_z` | 3D position of the left eye origin |
 | `eyeleft_dir_x`, `eyeleft_dir_y`, `eyeleft_dir_z` | 3D gaze direction vector of the left eye |
-| `pupil_left`           | Pupil diameter or size for the left eye |
+| `pupil_left`           | Pupil diameter of the left eye |
 | `eyeright_origin_x`, `eyeright_origin_y`, `eyeright_origin_z` | 3D position of the right eye origin |
 | `eyeright_dir_x`, `eyeright_dir_y`, `eyeright_dir_z` | 3D gaze direction vector of the right eye |
-| `pupil_right`          | Pupil diameter or size for the right eye |
+| `pupil_right`          | Pupil diameter of the right eye |
 
 If you find these signals useful for your own research, please cite the relevant papers and dataset as:
 
