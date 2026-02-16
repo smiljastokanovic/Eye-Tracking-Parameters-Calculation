@@ -2,7 +2,7 @@
 
 This repository contains MATLAB and Python programming codes, as well as eye movement data in a driving simulator during three conditions: Baseline, Ride (simulated drive under normal visibility), and Fog (simulated drive under reduced visibility) that reproduce results for the paper titled "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator" authored by Smilja Stokanović (ORCiD: [0000-0003-0887-2615](https://orcid.org/0000-0003-0887-2615)), Jaka Sodnik (ORCiD: [0000-0002-8915-9493](https://orcid.org/0000-0002-8915-9493)), and Nadica Miljković (ORCiD: [0000-0002-3933-6076](https://orcid.org/0000-0002-3933-6076)). 
 ## GitHub Repository Contents
-This repository contains MATLAB and Python programming codes, as well as obtained signal quality parameters and referent annotations for maternal QRS complexes used for reproducing results presented in the paper titled "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator". Also, this repository contains a README.md file with relevant information essential for code reproducibility and a LICENSE file that contains license information that covers shared software codes.
+This repository contains MATLAB and Python programming codes, as well as the database used for reproducing the results presented in the paper titled "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator". Also, this repository contains a README.md file with relevant information essential for code reproducibility and a LICENSE file that contains license information that covers shared software codes.
 
 ### Code
 Shared programs are free software: you can redistribute them and/or modify them under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. These programs are distributed in the hope that they will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with these programs. If not, see https://www.gnu.org/licenses/.
@@ -83,6 +83,7 @@ Accessed: February 2026
 
 ## Contacts
 Smilja Stokanović (smiljastokanovic@gmail.com)
+
 ## Funding
 Nadica Miljković kindly acknowledges the support from the Grant No. 451-03-137/2025-03/2001 funded by the Ministry of Science, Technological Development, and Innovation of the Republic of Serbia.
 This work has been financially supported also by the European Union’s Horizon Europe research and innovation program for the project FRODDO, grant agreement no. 101147819 and by the Slovenian Research and Innovation Agency within the program ICT4QL, grant no. P2-0246.
