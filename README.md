@@ -52,7 +52,7 @@ The repository is divided into four main folders and the repository contains the
    [BCEA.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/BCEA.m) - MATLAB script for calculation of Bivariate Contour Ellipse Area (BCEA) parameters and visualization. <br>
    [ellipseOverlap.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/ellipseOverlap.m) - MATLAB function for calculation area of ellipse1 overlapped by ellipse2. <br>
    [mahalPts.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/mahalPts.m) -  mahalPts computes the squared Mahalanobis distance between points and a multivariate Gaussian distribution defined by mean (mu) and covariance (S). The Mahalanobis distance accounts for covariance structure and scaling of the data, unlike Euclidean distance<br>
-   [sampen.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/sampen.m) - <br>
+   [sampen.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/BCEA/sampen.m) - Sample Entropy (SampEn) quantifies signal irregularity and complexity by estimating the probability that similar patterns of length m remain similar when extended to length m+1. <br>
    
 5) Blink detection: <br>
    [BlinkDetection.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Blink%20detection/BlinkDetection.m) - MATLAB script for calculation of blink parameters and visualization. <br>
