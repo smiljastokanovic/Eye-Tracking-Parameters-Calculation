@@ -34,9 +34,9 @@ This repository contains the complete analysis pipeline for processing eye track
 │   ├── central_der.m
 │   ├── parameterSearch.m
 │   └── saccade_detection_function.m
-├── CITATION.cff/
-├── LICENSE/
-├── README.md/
+├── CITATION.cff
+├── LICENSE
+├── README.md
 └── SubjectTimestamps.m
 ```
 
