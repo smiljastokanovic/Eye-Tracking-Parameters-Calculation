@@ -21,14 +21,19 @@ This repository contains the complete analysis pipeline for processing eye track
 │   └── BlinkDetection.m
 ├── DataBase/
 ├── Saccade Detection/
-│   ├── BaselineScript.m
+│   ├── BCEAStatisticsFeatures1.ipynb
+│   ├── BCEAStatisticsFeatures2.ipynb
+│   ├── BlinksStatisticFeatures1.ipynb
+│   ├── BlinksStatisticFeatures2.ipynb
+│   ├── SaccadeStatisticsFeatures1.ipynb
+│   └── SaccadeStatisticsFeatures2.ipynb
+├── Statistical Analysis/
 │   ├── FogScript.py
 │   ├── IVT_algorithm.m
 │   ├── RideScript.m
 │   ├── central_der.m
 │   ├── parameterSearch.m
 │   └── saccade_detection_function.m
-├── Statistical Analysis/
 ├── CITATION.cff/
 ├── LICENSE/
 ├── README.md/
