@@ -20,7 +20,7 @@ This repository contains the complete analysis pipeline for processing eye track
 │   └── sampen.m
 ├── Blink Detection/
 │   └── BlinkDetection.m
-├── DataBase/
+├── Database Description/
 ├── Saccade Detection/
 │   ├── FogScript.py
 │   ├── IVT_algorithm.m
@@ -54,8 +54,8 @@ The repository is divided into four main folders and the repository contains the
 2) Blink Detection: <br>
    [BlinkDetection.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Blink%20detection/BlinkDetection.m) - MATLAB script for calculation of blink parameters and visualization. <br>
 
-3) Database: <br>
-   [README.md](https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation/blob/main/Database/README.md) - contains a README.md file with a link to the Zenodo page containing the used eye tracking dataset.<br>
+3) Database Description: <br>
+   [README.md](https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation/tree/main/Database%20Description/README.md) - contains a README.md file with a link to the Zenodo page containing the used eye tracking dataset.<br>
 
 4) Saccades Detection: <br>
   [BaselineScript.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/BaselineScript.m) - Script for saccade detection and parameter calculation for the Baseline segment.<br>
@@ -102,5 +102,6 @@ The MATLAB code is provided without any guarantee and it is not intended for med
 ## How to cite this repository?
 If you find the provided code and signals useful for your own research and teaching class, please cite the following references:
 
-1. Stokanović, S., Sodnik, J., and Miljković, N., "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator." ArXiv, 2025, https://doi.org/10.48550/arXiv.2511.02689.<br>
-2. Stokanović, S., Sodnik, J., and Miljković, N., 2026. EyeTrackingParametersCalculation: Software and Data for From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator [Data set]. Zenodo, https://doi.org/10.5281/zenodo.18660836.
+1. Stokanović, S., Sodnik, J., and Miljković, N., "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator." ArXiv, 2025, https://doi.org/10.48550/arXiv.2511.02689.
+2. Stokanović, S., Sodnik, J., and Miljković, N., 2026. Software for Comprehensive Eye Tracking Feature Extraction [Software]. Zenodo, https://doi.org/10.5281/zenodo.18660836, GitHub: https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation, Accessed on: February 26th, 2026.
+3. Stokanović, S., Sodnik, J., and Miljković, N., 2026. Eye Tracking Dataset for Comprehensive Eye Tracking Feature Extraction [Dataset]. Zenodo, https://doi.org/10.5281/zenodo.18803236.
