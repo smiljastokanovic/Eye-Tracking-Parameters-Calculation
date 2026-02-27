@@ -54,7 +54,7 @@ The repository is divided into four main folders and the repository contains the
 2) Blink detection: <br>
    [BlinkDetection.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Blink%20detection/BlinkDetection.m) - MATLAB script for calculation of blink parameters and visualization. <br>
 
-3) Database - contains a README.md file with a link to the Zenodo page containing the used eye tracking dataset.<br>
+3) [Database] (https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation/blob/main/Database/README.md) - contains a README.md file with a link to the Zenodo page containing the used eye tracking dataset.<br>
 
 4) Saccades detection: <br>
   [BaselineScript.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/BaselineScript.m) - Script for saccade detection and parameter calculation for the Baseline segment.<br>
@@ -73,7 +73,7 @@ The repository is divided into four main folders and the repository contains the
    [SaccadeStatisticsFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures.ipynb) - Python code for calculation of central tendency statistics, boxplots, and correlation matrices for saccade detection parameters. <br>
    [SaccadeStatisticsFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures2.ipynb) - Python code for saccade parameters post-hoc statistical analysis. <br>
 
-6) [CITATION.cff] - a plain-text file explaining how to properly cite software.
+6) [CITATION.cff](https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation/blob/main/CITATION.cff) - a plain-text file explaining how to properly cite software.
 
 7) [LICENSE file](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/LICENSE) - containing GNU General Public License v3.0.
 
