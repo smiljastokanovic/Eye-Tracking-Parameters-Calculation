@@ -74,11 +74,7 @@ The repository is divided into four main folders and the repository contains the
    [SaccadeStatisticsFeatures1.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures.ipynb) - Python code for calculation of central tendency statistics, boxplots, and correlation matrices for saccade detection parameters. <br>
    [SaccadeStatisticsFeatures2.ipynb](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Statistical%20Analysis/SaccStatisticsFeatures2.ipynb) - Python code for saccade parameters post-hoc statistical analysis. <br>
 
-6) [CITATION.cff](https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation/blob/main/CITATION.cff) - a plain-text file explaining how to properly cite software.
-
-7) [LICENSE file](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/LICENSE) - containing GNU General Public License v3.0.
-
-8) [SubjectTimestamps.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/SubjectTimestamps.m) - MATLAB script for the Baseline, Ride, and Fog Timestamps. This script should be used for saccade detection, BCEA, and blink detection.
+6) [SubjectTimestamps.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/SubjectTimestamps.m) - MATLAB script for the Baseline, Ride, and Fog Timestamps. This script should be used for saccade detection, BCEA, and blink detection.
  
 ### Data
 Data provided in this repository are shared under Attribution 4.0 International (CC BY 4.0).
