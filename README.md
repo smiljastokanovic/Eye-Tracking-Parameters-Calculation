@@ -54,7 +54,8 @@ The repository is divided into four main folders and the repository contains the
 2) Blink detection: <br>
    [BlinkDetection.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Blink%20detection/BlinkDetection.m) - MATLAB script for calculation of blink parameters and visualization. <br>
 
-3) [Database] (https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation/blob/main/Database/README.md) - contains a README.md file with a link to the Zenodo page containing the used eye tracking dataset.<br>
+3) Database: <br>
+   [README.md](https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation/blob/main/Database/README.md) - contains a README.md file with a link to the Zenodo page containing the used eye tracking dataset.<br>
 
 4) Saccades detection: <br>
   [BaselineScript.m](https://github.com/smiljastokanovic/EyeTrackingParametersCalculation/blob/main/Saccade%20Detection/BaselineScript.m) - Script for saccade detection and parameter calculation for the Baseline segment.<br>
@@ -97,13 +98,13 @@ Smilja Stokanović (smiljastokanovic@gmail.com)
 
 ## Funding
 Nadica Miljković kindly acknowledges the support from the Grant No. 451-03-137/2025-03/2001 funded by the Ministry of Science, Technological Development, and Innovation of the Republic of Serbia.
-This work has been financially supported also by the European Union’s Horizon Europe research and innovation program for the project FRODDO, grant agreement no. 101147819 and by the Slovenian Research and Innovation Agency within the program ICT4QL, grant no. P2-0246.
+This work has also been financially supported by the European Union’s Horizon Europe research and innovation program for the project FRODDO, grant agreement no. 101147819 and by the Slovenian Research and Innovation Agency within the program ICT4QL, grant no. P2-0246.
 
 ## Disclaimer
 The MATLAB code is provided without any guarantee and it is not intended for medical purposes.
 
 ## How to cite this repository?
-If you find provided code and signals useful for your own research and teaching class, please cite the following references:
+If you find the provided code and signals useful for your own research and teaching class, please cite the following references:
 
 1. Stokanović, S., Sodnik, J., and Miljković, N., "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator." ArXiv, 2025, https://doi.org/10.48550/arXiv.2511.02689.<br>
 2. Stokanović, S., Sodnik, J., and Miljković, N., 2026. EyeTrackingParametersCalculation: Software and Data for From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator [Data set]. Zenodo, https://doi.org/10.5281/zenodo.18660836.
