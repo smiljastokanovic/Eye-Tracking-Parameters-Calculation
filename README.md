@@ -103,5 +103,5 @@ The MATLAB code is provided without any guarantee and it is not intended for med
 If you find the provided code and signals useful for your own research and teaching class, please cite the following references:
 
 1. Stokanović, S., Sodnik, J., and Miljković, N., "From Raw Gaze to Meaningful Features: Assessment of Visual Behavior in Driving Simulator." ArXiv, 2025, https://doi.org/10.48550/arXiv.2511.02689.
-2. Stokanović, S., Sodnik, J., and Miljković, N., 2026. Software for Comprehensive Eye Tracking Feature Extraction [Software]. Zenodo, https://doi.org/10.5281/zenodo.18660836, GitHub: https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation, Accessed on: February 26th, 2026.
+2. Stokanović, S., Sodnik, J., and Miljković, N., 2026. Software for Comprehensive Eye Tracking Feature Extraction [Software]. Zenodo, [https://doi.org/10.5281/zenodo.18660155](https://doi.org/10.5281/zenodo.18660155), GitHub: https://github.com/smiljastokanovic/Eye-Tracking-Parameters-Calculation, Accessed on: February 26th, 2026.
 3. Stokanović, S., Sodnik, J., and Miljković, N., 2026. Eye Tracking Dataset for Comprehensive Eye Tracking Feature Extraction [Dataset]. Zenodo, https://doi.org/10.5281/zenodo.18803236.
